@@ -51,8 +51,6 @@ public class ItemHelper {
         if (client.player == null) return equiped;
         PlayerInventory inv = client.player.inventory;
         combined.addAll(inv.armor);
-        combined.add(inv.getMainHandStack());
-        combined.addAll(inv.offHand);
         for (ItemStack stack : combined) {
             if (stack.isItemEqualIgnoreDamage(new ItemStack(Items.AIR))) {
                 continue;
